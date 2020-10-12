@@ -1,0 +1,372 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Document Pipeline &#8212; DGCL Actes IA  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to DGCL Actes IA’s documentation!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="document-pipeline">
+<h1>Document Pipeline<a class="headerlink" href="#document-pipeline" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-code.utils">
+<span id="code-utils-module"></span><h2>code.utils module<a class="headerlink" href="#module-code.utils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="utils-py">
+<h3>utils.py<a class="headerlink" href="#utils-py" title="Permalink to this headline">¶</a></h3>
+<p>Module to manage PDF files</p>
+<dl class="function">
+<dt id="code.utils.get_file_paths">
+<code class="descclassname">code.utils.</code><code class="descname">get_file_paths</code><span class="sig-paren">(</span><em>path</em>, <em>recursive=False</em>, <em>extension='.pdf'</em><span class="sig-paren">)</span><a class="headerlink" href="#code.utils.get_file_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns paths for all the files contained in the folder</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> – Path to the folder</li>
+<li><strong>recursive</strong> – if True, will look for pdf files in directory and subdirectories</li>
+<li><strong>extension</strong> – Extension that files need to have</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list with the paths to all files with a specific extension in the folder</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.utils.get_folder">
+<code class="descclassname">code.utils.</code><code class="descname">get_folder</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#code.utils.get_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the folder where the file is</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Path to the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Folder name where the file is</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.utils.multiprocessing">
+<code class="descclassname">code.utils.</code><code class="descname">multiprocessing</code><span class="sig-paren">(</span><em>arr</em>, <em>func</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#code.utils.multiprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies function to array with multiprocessing</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>arr</strong> – List or np.ndarray</li>
+<li><strong>func</strong> – Function applied to the array</li>
+<li><strong>workers</strong> – Number of processes in the pool, by default uses the maximum number of cores - 1</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">List with the function applied to each element of the input list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.utils.multithreading">
+<code class="descclassname">code.utils.</code><code class="descname">multithreading</code><span class="sig-paren">(</span><em>arr</em>, <em>func</em>, <em>workers=4</em><span class="sig-paren">)</span><a class="headerlink" href="#code.utils.multithreading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies function to array with multithreading</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>arr</strong> – List or np.ndarray</li>
+<li><strong>func</strong> – Function applied to the array</li>
+<li><strong>workers</strong> – Number of threads in the pool</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">List with the function applied to each element of the input list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.utils.remove_extension">
+<code class="descclassname">code.utils.</code><code class="descname">remove_extension</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#code.utils.remove_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the extension of the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Path to the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Path without the extension</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.utils.unzip">
+<code class="descclassname">code.utils.</code><code class="descname">unzip</code><span class="sig-paren">(</span><em>input_path</em>, <em>output_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#code.utils.unzip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unzip a compressed folder</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>input_path</strong> – Path to the compressed folder</li>
+<li><strong>output_path</strong> – Path where to uncompress the folder (default will uncompress in the same folder with the same name as the compressed file)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if the folder was unzipped successfully, False otherwise</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-code.extract">
+<span id="code-extract-module"></span><h2>code.extract module<a class="headerlink" href="#module-code.extract" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="extract-py">
+<h3>extract.py<a class="headerlink" href="#extract-py" title="Permalink to this headline">¶</a></h3>
+<p>Module to extract text from PDF files</p>
+<dl class="function">
+<dt id="code.extract.text_from_pdf">
+<code class="descclassname">code.extract.</code><code class="descname">text_from_pdf</code><span class="sig-paren">(</span><em>path</em>, <em>ignore_image=False</em><span class="sig-paren">)</span><a class="headerlink" href="#code.extract.text_from_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts text from a pdf</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> – Path to the pdf file</li>
+<li><strong>ignore_image</strong> – If True, ignore pdf with images for faster processing</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A String corresponding to the text in the PDF</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.extract.text_from_pdf_image">
+<code class="descclassname">code.extract.</code><code class="descname">text_from_pdf_image</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#code.extract.text_from_pdf_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts text from a pdf image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Path to the pdf image file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A String corresponding to the text in the PDF</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="code.extract.text_from_pdf_text">
+<code class="descclassname">code.extract.</code><code class="descname">text_from_pdf_text</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#code.extract.text_from_pdf_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts text from a pdf text</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Path to the pdf text file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A String corresponding to the text in the PDF</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-code.pipeline">
+<span id="code-pipeline-module"></span><h2>code.pipeline module<a class="headerlink" href="#module-code.pipeline" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.pipeline.Pipeline">
+<em class="property">class </em><code class="descclassname">code.pipeline.</code><code class="descname">Pipeline</code><a class="headerlink" href="#code.pipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-code.bdd">
+<span id="code-bdd-module"></span><h2>code.bdd module<a class="headerlink" href="#module-code.bdd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bdd-py">
+<h3>bdd.py<a class="headerlink" href="#bdd-py" title="Permalink to this headline">¶</a></h3>
+<p>Module to manage PostgreSQL database</p>
+</div>
+<dl class="class">
+<dt id="code.bdd.PostgreSQL_DB">
+<em class="property">class </em><code class="descclassname">code.bdd.</code><code class="descname">PostgreSQL_DB</code><span class="sig-paren">(</span><em>enable_mail=True</em><span class="sig-paren">)</span><a class="headerlink" href="#code.bdd.PostgreSQL_DB" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="code.bdd.PostgreSQL_DB.drop_table">
+<code class="descname">drop_table</code><span class="sig-paren">(</span><em>table_name</em><span class="sig-paren">)</span><a class="headerlink" href="#code.bdd.PostgreSQL_DB.drop_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drop a table from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>table_name</strong> – Name of the table to drop</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the table was successfully dropped, False otherwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.bdd.PostgreSQL_DB.get_table">
+<code class="descname">get_table</code><span class="sig-paren">(</span><em>sql_query</em><span class="sig-paren">)</span><a class="headerlink" href="#code.bdd.PostgreSQL_DB.get_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the database and store it in a dataframe</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sql_query</strong> – Query in the database</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Dataframe containing the result of the query</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.bdd.PostgreSQL_DB.save_table">
+<code class="descname">save_table</code><span class="sig-paren">(</span><em>df</em>, <em>table_name</em>, <em>if_exists='replace'</em><span class="sig-paren">)</span><a class="headerlink" href="#code.bdd.PostgreSQL_DB.save_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save table to postgreSQL database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>df</strong> – Dataframe to save</li>
+<li><strong>table_name</strong> – Name for the table in the database</li>
+<li><strong>if_exists</strong> – ‘replace’ to replace the table or ‘append’ to append to the existing table</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if the table was saved successfully, False otherwise</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.bdd.PostgreSQL_DB.send_error_data_by_mail">
+<code class="descname">send_error_data_by_mail</code><span class="sig-paren">(</span><em>error_traceback</em><span class="sig-paren">)</span><a class="headerlink" href="#code.bdd.PostgreSQL_DB.send_error_data_by_mail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the last error traceback and send alert email.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>email_infos</strong> – a dictionary like {‘sender’:<a class="reference external" href="mailto:sender&#37;&#52;&#48;domain&#46;com">sender<span>&#64;</span>domain<span>&#46;</span>com</a>,
+‘receivers’:[<a class="reference external" href="mailto:'receive1&#37;&#52;&#48;domain&#46;com">‘receive1<span>&#64;</span>domain<span>&#46;</span>com</a>’, <a class="reference external" href="mailto:'receive2&#37;&#52;&#48;domain&#46;com">‘receive2<span>&#64;</span>domain<span>&#46;</span>com</a>’],
+‘server’:’mail.part.net’}</li>
+<li><strong>error_traceback</strong> – error traceback text</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to DGCL Actes IA’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Starclay.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/code.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

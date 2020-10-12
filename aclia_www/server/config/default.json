@@ -1,0 +1,11 @@
+{
+  "port": 3011,
+  "logLevel": "info",
+  "db": {
+    "database": "dgcl",
+    "user": "ghpsj",
+    "host": "192.168.222.204",
+    "password": "starclay2018",
+    "port": 5432
+  }
+}
