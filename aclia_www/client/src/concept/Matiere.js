@@ -1,0 +1,63 @@
+export const Matiere = {
+    'Matiere':
+    {
+        'Commande Publique': [
+            'Marchés publics',
+            'Délégation de service public',
+            'Conventions de Mandat',
+            'Autres types de contrats',
+            'Transactions /protocole d accord transactionnel',
+            'Actes relatifs à la maîtrise d\'oeuvre',
+            'Actes speciaux et divers',
+        ],
+        'Urbanisme': [
+            'Documents d urbanisme',
+            'Actes relatifs au droit d occupation ou d utilisation des sols',
+            'Droit de preemption urbain',
+        ],
+        'Domaine et patrimoine': [
+            'Acquisitions',
+            'Alienations',
+            'Locations',
+            'Limites territoriales',
+            'Autres actes de gestion du domaine public',
+            'Autres actes de gestion du domaine prive',
+        ],
+        'Fonction publique': [
+            'Personnel titulaires et stagiaires de la F.P.T.',
+            'Personnel contractuel',
+            'Fonction publique hospitaliere',
+            'Autres categories de personnels',
+            'Regime indemnitaire',
+        ],
+        'Institutions et vie politique': [
+            'Election executif',
+            'Fonctionnement des assemblees',
+            'Designation de representants',
+            'Delegation de fonctions',
+            'Delegation de signature',
+            'Exercice des mandats locaux',
+            'Intercommunalite',
+            'Decision d ester en justice',
+        ],
+        'Libertés publiques et pourvoirs de police': [
+            'Police municipale',
+            'Pouvoir du president du conseil general',
+            'Pouvoir du president du conseil regional',
+            'Autres actes reglementaires',
+            'Actes pris au nom de l Etat et soumis au controle hierarchique',
+        ],
+        'Finances locales': [
+            'Decisions budgetaires',
+            'Fiscalité',
+            'Emprunts',
+            'Interventions economiques',
+            'Subventions',
+            'Contributions budgetaires',
+            'Avances',
+            'Fonds de concours',
+            'Prise de participation (SEM, etc...)',
+            'Divers',
+        ],
+    },
+};
