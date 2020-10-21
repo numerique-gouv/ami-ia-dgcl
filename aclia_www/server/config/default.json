@@ -1,0 +1,11 @@
+{
+  "port": port,
+  "logLevel": "info",
+  "db": {
+    "database": "db_name",
+    "user": "db_user",
+    "host": "db_host",
+    "password": "db_pwd",
+    "port": db_port
+  }
+}
