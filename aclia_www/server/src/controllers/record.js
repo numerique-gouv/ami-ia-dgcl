@@ -2,7 +2,6 @@
 import express from 'express';
 import DBManager from '@db-manager/index.js';
 import logger from '@tools/logger';
-import _ from 'lodash';
 import url from 'url';
 import queryString from 'query-string';
 

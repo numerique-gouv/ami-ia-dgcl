@@ -1,11 +1,11 @@
 {
-  "port": port,
+  "port": xxx,
   "logLevel": "info",
   "db": {
-    "database": "db_name",
-    "user": "db_user",
-    "host": "db_host",
-    "password": "db_pwd",
-    "port": db_port
+    "database": "xxx",
+    "user": "xxx",
+    "host": "xxx.168.222.204",
+    "password": "xxx",
+    "port": xxx
   }
 }

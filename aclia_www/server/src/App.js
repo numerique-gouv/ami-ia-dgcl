@@ -13,6 +13,7 @@ import { loggerMiddleware } from '@middleware/logger.middleware.js';
 import { AuthController } from '@controllers/auth';
 import { DashController } from '@controllers/dashboard';
 import { RecordController } from '@controllers/record';
+import { ValidationController } from '@controllers/validation';
 //import { exportController } from '@controllers/export';
 
 class App {
@@ -24,6 +25,7 @@ class App {
             new AuthController(),
             new DashController(),
             new RecordController(),
+            new ValidationController(),
         ];
         this.initializeMiddlewares = this.initializeMiddlewares.bind(this);
         this.initializeControllers = this.initializeControllers.bind(this);
@@ -74,7 +76,7 @@ class App {
             this.app.use('/api/', controller.router);
         });
         this.app.get('*', (req, res) => {
-            res.send('404 Not Found');
+            res.status(404).json({error: '404 Not Found'});
         });
     }
 

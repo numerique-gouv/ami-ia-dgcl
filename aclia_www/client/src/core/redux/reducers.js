@@ -8,6 +8,8 @@ import auth, { STATE_KEY as AUTH_STATE_KEY } from './Auth/reducer.js';
 import userMe, { STATE_KEY as USER_ME_STATE_KEY } from './Me/reducer';
 import dashboard, { STATE_KEY as DASHBOARD_STATE_KEY } from './dashboard/reducer';
 import record, { STATE_KEY as RECORD_STATE_KEY } from './record/reducer';
+import validation, { STATE_KEY as VALIDATION_STATE_KEY } from './validation/reducer';
+
 import initialStateRecord from './record/state.js';
 
 // History
@@ -27,6 +29,7 @@ const appReducer = combineReducers({
     [USER_ME_STATE_KEY]: userMe,
     [DASHBOARD_STATE_KEY]: dashboard,
     [RECORD_STATE_KEY]: record,
+    [VALIDATION_STATE_KEY]: validation,
     //Router
     router: connectRouter(history),
 });

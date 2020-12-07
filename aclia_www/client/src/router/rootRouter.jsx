@@ -9,6 +9,7 @@ import  ConnectedSwitch  from './component/connected.jsx';
 //Containers
 import { WrappedLogin } from '../containers/login/index.jsx';
 import  Dashboard  from '../containers/dashboard/index.jsx';
+import Validation from '../containers/validation/index.jsx';
 import NavBar from '../containers/navbar/index.jsx';
 //Selector
 import * as AuthSelector from '../core/redux/Auth/selector.js';
@@ -105,8 +106,9 @@ class RootRouter extends React.Component {
                     <NavBar />
                     <ConnectedSwitch>
                         <Route exact path="/statistique" component={ Dashboard } />
+                        <Route exact path="/validation" component={ Validation } />
                         <Route exact path="/annotation" component={ MainAnnotation } />
-                        <Redirect from="/" to="/annotation" />
+                        <Redirect from="/" to="/validation" />
                     </ConnectedSwitch>
                 </Layout>
             );

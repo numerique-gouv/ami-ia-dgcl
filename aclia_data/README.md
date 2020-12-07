@@ -36,6 +36,8 @@ First you need to clone the repository.
 git clone git@192.168.222.205:ms9/dgcl/actes-ia-data.git
 ```
 
+Add the path to this project path/to/actes-ia-data in the PYTHONPATH environment variable 
+
 To configurate pytesseract with french language, download __fra.traineddata__ from the pytesseract [github](https://github.com/tesseract-ocr/tessdata) and place it in __<path_to_Tesseract-OCR>/tessdata/__
 
 To configurate the access to the database, create a file ConfigSQL.cfg in the config/ directory and add the following information:

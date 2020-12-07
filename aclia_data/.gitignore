@@ -1,0 +1,8 @@
+# Byte-compiled
+__pycache__/
+
+# Coverage report
+.coverage
+
+# Sphinx documentation
+docs/_build/

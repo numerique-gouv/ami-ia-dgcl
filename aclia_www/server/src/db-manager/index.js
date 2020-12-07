@@ -19,6 +19,17 @@ class DBManager {
     runQuery(query, params) {
         return this.pool.query(query, params);
     }
+    //Validation
+
+    async getValidationList() {
+        const result = await this.runQuery(Queries.get('getValidationList'));
+        return result.rowCount === 0 ? null : result.rows;
+    }
+
+    async getActe(noacte) {
+        const result = await this.runQuery(Queries.get('getActe'), [noacte]);
+        return result.rowCount === 0 ? null : result.rows;
+    }
     //Record
     async getRecordList(params) {
         const result = await this.runQuery(Queries.get('getRecordList'), [Number(JSON.parse((params.statut)))]);

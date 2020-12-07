@@ -55,8 +55,14 @@ class NavBar extends React.Component {
                     style={ { lineHeight: '64px' } }
                     onClick={ this.handleNav }
                 >
-                    <Menu.Item key="/annotation" keypath="/annotation">
+                    <Menu.Item key="/validation" keypath="/validation">
                         <Icon type="check-circle" />
+                        <span>
+                            {'Validation'}
+                        </span>
+                    </Menu.Item>
+                    <Menu.Item key="/annotation" keypath="/annotation">
+                        <Icon type="edit" />
                         <span>
                             {'Annotation'}
                         </span>

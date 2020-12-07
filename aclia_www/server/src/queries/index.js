@@ -8,6 +8,9 @@ const queries = {
     //Dashboard
     getMetrics: fs.read(path.join(__dirname, '/dashboard/get-metrics.sql')),
     getDept: fs.read(path.join(__dirname, '/dashboard/get-stat-dept.sql')),
+    //Validation
+    getValidationList: fs.read(path.join(__dirname, '/validation/getValidationList.sql')),
+    getActe: fs.read(path.join(__dirname, '/validation/getActe.sql')),
     // Record
     // getRecordList: fs.read(path.join(__dirname, '/record/get-recordList.sql')),
     getRecordListAnnoted: fs.read(path.join(__dirname, '/record/get-recordList-annoted.sql')),

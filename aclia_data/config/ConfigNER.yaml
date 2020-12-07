@@ -1,11 +1,10 @@
 --- 
 hyperparameters:
-  iterations:
+  epochs:
   - 50
-  lr:
+  learning_rate:
   - 0.003
   - 0.001
   - 0.0003
   dropout:
   - 0.2
- 

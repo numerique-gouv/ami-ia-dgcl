@@ -67,7 +67,8 @@ def unzip(input_path, output_path=None):
     """Unzip a compressed folder
     
     :param input_path: Path to the compressed folder
-    :param output_path: Path where to uncompress the folder (default will uncompress in the same folder with the same name as the compressed file)
+    :param output_path: Path where to uncompress the folder 
+    (default will uncompress in the same folder with the same name as the compressed file)
     :returns: True if the folder was unzipped successfully, False otherwise
     """
     
