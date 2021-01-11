@@ -126,7 +126,13 @@ python ML/scripts/train_ner.py -d <path_to_dataset> -m <path_to_directory_with_t
 python ML/scripts/train_ner.py -d <path_to_dataset> -t <type_of_label> -m <path_to_trained_model> -s <path_for_wordclouds>
 ```
 
-## Documentation
+### Technico-functional documentation
+For a better understanding of the python treatments, please read :
+- [projet_aclia_pipeline_data_documentation_technico_fonctionnelle](projet_aclia_pipeline_data_documentation_technico_fonctionnelle_v1.docx)
+- [projet_aclia_traitements_IA_documentation_technico_fonctionnelle](projet_aclia_traitements_IA_documentation_technico_fonctionnelle_v1.docx)
+
+
+## Technical documentation
 
 The technical documentation is located inside **./docs/_build/pdf** or **./docs/_build/html**.
 
