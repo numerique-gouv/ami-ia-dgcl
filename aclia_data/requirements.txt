@@ -20,6 +20,6 @@ psutil==5.7.2
 Unidecode==1.1.1
 flair==0.6.1
 lime==0.2.0.1
-Pillow==8.0.1
+Pillow==8.2.0
 PyPDF2==1.26.0
 scikit_learn==0.23.2
