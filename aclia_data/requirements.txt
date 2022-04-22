@@ -21,5 +21,5 @@ Unidecode==1.1.1
 flair==0.6.1
 lime==0.2.0.1
 Pillow==8.0.1
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 scikit_learn==0.23.2
